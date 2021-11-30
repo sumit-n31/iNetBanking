@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="iNetBankingV1" parallel="tests" thread-count="2">
+
+	<listeners>
+		<listener class-name="com.iNetBankingV1.utilities.Reporting" />
+	</listeners>
+
+	<test name="ChromeTest">
+		<parameter name="Browser" value="chrome" />
+		<classes>
+			<!-- <class name="com.iNetBankingV1.testCases.TC_LoginTest_003" /> -->
+			<!-- <class name="com.iNetBankingV1.testCases.TC_LoginTest_001" /> -->
+			<class name="com.iNetBankingV1.testCases.TC_LoginDDT_002" />
+		</classes>
+	</test>
+	<test name="FireTest">
+		<parameter name="Browser" value="firefox" />
+		<classes>
+			<!-- <class name="com.iNetBankingV1.testCases.TC_LoginTest_003" /> -->
+			<!-- <class name="com.iNetBankingV1.testCases.TC_LoginTest_001" /> -->
+			<class name="com.iNetBankingV1.testCases.TC_LoginDDT_002" />
+		</classes>
+	</test>
+
+
+</suite>
